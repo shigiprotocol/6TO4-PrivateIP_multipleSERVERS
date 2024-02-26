@@ -238,7 +238,7 @@ ip tunnel add azumi mode sit remote $remote_ip local $local_ip ttl 255 > /dev/nu
 ip link set dev azumi up > /dev/null
  
 # iran initial IP address
-initial_ip="fd01:3ef0:dc5c:9a7d::1/64"
+initial_ip="fdf1:1a4e:ba48:09bd::1/64"
 ip addr add $initial_ip dev azumi > /dev/null
 
 # additional private IPs-number
@@ -264,7 +264,7 @@ done
 	display_notification $'\e[93mAdding commands to private.sh...\e[0m'
     echo "ip tunnel add azumi mode sit remote $remote_ip local $local_ip ttl 255" >> /etc/private.sh
     echo "ip link set dev azumi up" >> /etc/private.sh
-    echo "ip addr add fd01:3ef0:dc5c:9a7d::1/64 dev azumi" >> /etc/private.sh
+    echo "ip addr add fdf1:1a4e:ba48:09bd::1/64 dev azumi" >> /etc/private.sh
         ip_addr="fd01:3ef0:dc5c:9a7${ip_suffix}::1/64"
         echo "ip addr add $ip_addr dev azumi" >> /etc/private.sh
 
@@ -1202,7 +1202,7 @@ do
     
     if [ $i -eq 1 ]; then
         device_name="azumi"
-        initial_ip="fd01:3ef0:dc5c:9a7d::1/64"
+        initial_ip="fdf1:1a4e:ba48:09bd::1/64"
         kharej_ip="fd01:3ef0:dc5c:9a71::2/64"
         i_ip="fd01:3ef0:dc5c:9a7"
     elif [ $i -eq 2 ]; then
@@ -1294,7 +1294,7 @@ create_ping_files() {
 
     if [ $server_number -eq 1 ]; then
         device_name="azumi"
-        initial_ip="fd01:3ef0:dc5c:9a7d::1/64"
+        initial_ip="fdf1:1a4e:ba48:09bd::1/64"
         kharej_ip="fd01:3ef0:dc5c:9a71::2"
         i_ip="fd01:3ef0:dc5c:9a7"
 		ping=40
@@ -2149,7 +2149,7 @@ do
     # Set IP address based on server number
     if [ $i -eq 1 ]; then
         device_name="azumi"
-        initial_ip="fd01:3ef0:dc5c:9a7d::1/64"
+        initial_ip="fdf1:1a4e:ba48:09bd::1/64"
         iran_ip="fd01:3ef0:dc5c:9a71::2/64"
         i_ip="fd01:3ef0:dc5c:9a7"
     elif [ $i -eq 2 ]; then
@@ -2240,7 +2240,7 @@ create_ping_files() {
 	
     if [ $server_number -eq 1 ]; then
         device_name="azumi"
-        initial_ip="fd01:3ef0:dc5c:9a7d::1/64"
+        initial_ip="fdf1:1a4e:ba48:09bd::1/64"
         iran_ip="fd01:3ef0:dc5c:9a71::2"
         i_ip="fd01:3ef0:dc5c:9a7"
 		ping=40
